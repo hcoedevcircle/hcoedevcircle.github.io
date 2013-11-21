@@ -24,12 +24,14 @@ $(document).ready(function() {
 		stickyNav();  
 	});
 	
-	$('#search-top-main').change(function(){
-		$('#search-top-notmain').val($('#search-top-main').val());
+	$('#search-top-main').keyup(function(){
+		var mainVal = $('#search-top-main').val();
+		$('#search-top-notmain').val(mainVal);
 	});
 	
-	$('#search-top-notmain').change(function(){
-		$('#search-top-main').val($('#search-top-notmain').val());
-	})
+	$('#search-top-notmain').keyup(function(){
+		var notMainVal = $('#search-top-notmain').val();
+		$('#search-top-main').val(notMainVal);
+	});
 	
 });  
