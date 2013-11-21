@@ -11,9 +11,15 @@ $(document).ready(function() {
 		}*/
 		var scrollTop = $(window).scrollTop();  
 
-		if (scrollTop > stickyNavTop) {   
+		if (scrollTop > stickyNavTop) {
+			if($('#search-top-main').is(':focus')){
+				$('#search-top-notmain').focus();
+			}
 			$('.nav').addClass('sticky');  
 		} else {  
+			if($('#search-top-notmain').is(':focus')){
+				$('#search-top-main').focus();
+			}
 			$('.nav').removeClass('sticky');   
 		}  
 	};  
