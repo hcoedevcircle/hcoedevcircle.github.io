@@ -185,10 +185,22 @@ body{
 	width: 100%;
 }
 .content-main{
-	width: 1000px;
+	position: relative;
+	width: 990px;
+	padding: 5px;
 	margin: 0 auto;
-	height: 1400px;
+	height: 900px;
 	text-align: justify;
+	border-left: 1px solid #aaa;
+	border-right: 1px solid #aaa;
+}
+#page-home,#page-network,#page-events,#page-involve{
+	position: absolute;
+	top:5px;
+	left: 5px;	
+}
+#page-network,#page-events,#page-involve{
+	display: none;
 }
 .footer{
 	position: relative;

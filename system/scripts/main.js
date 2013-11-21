@@ -39,5 +39,21 @@ $(document).ready(function() {
 		var notMainVal = $('#search-top-notmain').val();
 		$('#search-top-main').val(notMainVal);
 	});
-	
+	$(".nav-list a").click(function(e){
+		e.preventDefault();
+		var timer=200;
+		var delaytime=1000;
+		$('.content-main div').fadeOut(timer);
+		if($(this).attr('id')=="l-home"){
+			$('#page-home').delay(delaytime).fadeIn(timer);
+		}else if($(this).attr('id')=="l-network"){
+			$('#page-network').delay(delaytime).fadeIn(timer);
+		}else if($(this).attr('id')=="l-events"){
+			$('#page-events').delay(delaytime).fadeIn(timer);
+		}else if($(this).attr('id')=="l-inv"){
+			$('#page-involve').delay(delaytime).fadeIn(timer);
+		}else{
+
+		}
+	})
 });  
